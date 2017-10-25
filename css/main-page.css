@@ -1,0 +1,61 @@
+#banner {
+    background-color: #d4d4d4;
+    overflow: hidden;
+    height: 30px;
+} 
+
+li {
+    float: left;
+    list-style: none;
+}
+
+#banner p {
+    float: left;
+}
+
+li a {
+    color: Black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#search-bar {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+#search-button {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#left {
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+    float: left;
+    border: solid;
+    border: hidden;
+}
+
+
+
+.img {
+    width: 500px;
+    height: 300px;
+}
+
+#right {
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+    float: right;
+}

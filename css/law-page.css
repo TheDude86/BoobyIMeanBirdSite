@@ -33,6 +33,10 @@ li a {
     border-radius: 5px;
 }
 
+h1 {
+    text-align: center;
+}
+
 .img {
     width: 500px;
     height: 300px;
@@ -50,12 +54,14 @@ li a {
 
 #result {
     text-align: center;
+    height: 20px;
+    overflow: auto;
 }
 
 #display {
     width: 46%;
     margin: 2%;
-    height: 400px;
+    height: 450px;
     overflow: auto;
     border: solid thin gray;
 }

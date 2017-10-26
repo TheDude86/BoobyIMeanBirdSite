@@ -44,14 +44,13 @@ h1 {
 }
 
 .img {
-    width: 500px;
-    height: 300px;
+    width: 40%;
+    /* height: auto; */
     margin: auto;
 }
 
 .img:hover {
-    width: 550px;
-    height: 330px;
+    width: 50%;
 }
 
 .all-ratings {

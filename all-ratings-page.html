@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/rating-page.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-		window.jQuery || document.write('<script src="js/jquery-3.1.1.js"><\/script>');
-	</script>
-    <script src="js/rating-page.js"></script>
-    <title>Bird rating</title>
+    <link rel="stylesheet" href="css/all-ratings-page.css">
+    <title>All ratings</title>
 </head>
 <body>
     <div id="banner">
@@ -22,15 +17,18 @@
         <input class="input-small" type="text" name="search-bar" id="search-bar">
     </div>
 
-    <h1>Pick the better one from below</h1>
+    <h1>All Ratings</h1>
 
-    <div id="compare">
-        <img src="images/blue_footed_booby.jpg" alt="pic1" class="img">
-        <img src="images/Pigeon-HD-Pictures.jpg" alt="pic2" class="img">
-    </div>
+    <div id="display">
+        <div>
+            <img src="images/blue_footed_booby.jpg" alt="pic1">
+            <p><span class="upvote">999</span><span class="mid-bar">|</span><span class="downvote">33</span></p>
+        </div>
 
-    <div id="button">
-        <button class="all-ratings">All ratings</button>
+        <div>
+            <img src="images/bald_eagle.jpg" alt="pic2">
+            <p><span class="upvote">666</span><span class="mid-bar">|</span><span class="downvote">69</span></p>
+        </div>
     </div>
     
 </body>

@@ -38,31 +38,32 @@ h1 {
     text-align: center;
 }
 
-.img {
-    width: 90%;
-}
-
-#main {
-    display: flex;
-    flex: 1 1 0;
-}
-
-#choose {
-    width: 46%;
-    margin: 2%;
-}
-
-#result {
-    text-align: center;
-    height: 20px;
-    overflow: auto;
-}
-
 #display {
-    width: 46%;
-    margin: 2%;
-    height: 450px;
-    overflow: auto;
-    border: solid thin gray;
-    box-shadow: 10px 10px 5px grey;   
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+.upvote {
+    color: green;
+    font-size: 100px;
+}
+
+.downvote {
+    color: red;
+    font-size: 100px;
+}
+
+.mid-bar {
+    color: gray;
+    font-size: 100px;
+}
+
+p {
+    display: inline;
+    vertical-align: middle;
+}
+
+img {
+    max-width: 300px;
 }

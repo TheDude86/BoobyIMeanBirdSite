@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/law-page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+		window.jQuery || document.write('<script src="js/jquery-3.1.1.js"><\/script>');
+	</script>
+    <script src="js/law-page.js"></script>
     <title>Laws of birds</title>
 </head>
 <body>
@@ -19,7 +24,27 @@
 
     <h1>Laws of birds</h1>
 
-    <div id="main">
+    <input type="text" placeholder="Search..." id="search-box">
+
+    <div id="results">
+        <div class="result">
+            <img src="images/1.jpg" alt="">
+            <span>bird1</span>
+        </div>
+
+        <div class="result">
+            <img src="images/2.jpg" alt="">
+            <span>bird2</span>
+        </div>
+
+        <div class="result">
+            <img src="images/3.jpg" alt="">
+            <span>bird3</span>
+        </div>
+
+    </div>
+
+    <!-- <div id="main">
         <div id="choose">
             <label for="continent">Choose location: </label>
             <select name="continent" id="">
@@ -55,6 +80,6 @@
         <div id="display">
             passage here
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

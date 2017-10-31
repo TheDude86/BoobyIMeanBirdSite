@@ -5,10 +5,10 @@ $(document).ready(function () {
 
     $('#img1').click(function() {
         // add vote function
-        var num1 = Math.ceil(Math.random()*3);
-        var num2 = Math.ceil(Math.random()*3);
+        var num1 = Math.ceil(Math.random()*6);
+        var num2 = Math.ceil(Math.random()*6);
         while (num1 == num2) {
-            var num2 = Math.ceil(Math.random()*3);
+            var num2 = Math.ceil(Math.random()*6);
         }
         $('#img1').attr('src', `images/${num1}.jpg`);
         $('#img2').attr('src', `images/${num2}.jpg`);
@@ -16,10 +16,10 @@ $(document).ready(function () {
 
     $('#img2').click(function() {
         // add vote function
-        var num1 = Math.ceil(Math.random()*3);
-        var num2 = Math.ceil(Math.random()*3);
+        var num1 = Math.ceil(Math.random()*6);
+        var num2 = Math.ceil(Math.random()*6);
         while (num1 == num2) {
-            var num2 = Math.ceil(Math.random()*3);
+            var num2 = Math.ceil(Math.random()*6);
         }
         $('#img1').attr('src', `images/${num1}.jpg`);
         $('#img2').attr('src', `images/${num2}.jpg`);

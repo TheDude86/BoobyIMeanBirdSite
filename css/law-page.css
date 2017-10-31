@@ -38,7 +38,16 @@ h1 {
     text-align: center;
 }
 
-.img {
+#search-box {
+    width: 80%;
+    border-radius: 10px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    font-size: 40px;
+}
+
+/* .img {
     width: 90%;
 }
 
@@ -65,4 +74,30 @@ h1 {
     overflow: auto;
     border: solid thin gray;
     box-shadow: 10px 10px 5px grey;   
+} */
+
+#results {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#results div {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    height: 100px;
+    background: linear-gradient(white, gray);
+}
+
+#results img {
+    max-height: 100px;
+    vertical-align: middle;
+}
+
+#results span {
+    font-size: 60px;
+    vertical-align: middle;
 }

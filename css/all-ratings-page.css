@@ -44,6 +44,10 @@ h1 {
     flex-direction: column;
 }
 
+/* #display div {
+    display: flex;
+} */
+
 .upvote {
     color: green;
     font-size: 100px;

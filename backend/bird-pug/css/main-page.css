@@ -1,0 +1,64 @@
+#banner {
+    background-color: #d4d4d4;
+    overflow: hidden;
+    height: 30px;
+} 
+
+li {
+    float: left;
+    list-style: none;
+}
+
+#banner p {
+    float: left;
+}
+
+li a {
+    color: Black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#search-bar {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+#search-button {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+}
+
+#left {
+    width: 46%;
+    margin: 2%;
+}
+
+#left p {
+    word-break: break-all;
+    white-space: normal;
+}
+
+#right {
+    width: 46%;
+    margin: 2%;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+}

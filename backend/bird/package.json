@@ -1,0 +1,14 @@
+{
+  "name": "bird",
+  "version": "1.0.0",
+  "description": "bird backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Joe Novosel, Jake Laird, Jake Liu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

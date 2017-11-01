@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "express example",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Joe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,66 @@
+#banner {
+    background-color: #d4d4d4;
+    overflow: hidden;
+    height: 30px;
+} 
+
+li {
+    float: left;
+    list-style: none;
+}
+
+#banner p {
+    float: left;
+}
+
+li a {
+    color: Black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#search-bar {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+#search-button {
+    float: right;
+    font-size: 20px;
+    align-content: right;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#compare {
+    display: flex;
+    flex: 1 1 0;
+    height: 400px;
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+.img:hover {
+    width: 550px;
+    height: 330px;
+}
+
+.all-ratings {
+    margin-top: 5%;
+    align-self: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#button {
+    text-align: center;
+}

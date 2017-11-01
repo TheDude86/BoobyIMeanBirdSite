@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/rating-page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+		window.jQuery || document.write('<script src="js/jquery-3.1.1.js"><\/script>');
+	</script>
+    <script src="js/rating-page.js"></script>
     <title>Bird rating</title>
 </head>
 <body>
     <div id="banner">
-        <li><a href="">Bi.rd<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="">Home<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="">Ratings<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="">Laws<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="main-page.html">Bi.rd<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="main-page.html">Home<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="rating-page.html">Ratings<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="law-page.html">Laws<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
         <button id="search-button" type="button" id="search-button">Search</button>
         <input class="input-small" type="text" name="search-bar" id="search-bar">
     </div>
@@ -20,8 +25,8 @@
     <h1>Pick the better one from below</h1>
 
     <div id="compare">
-        <img src="images/Pigeon-HD-Pictures.jpg" alt="pic1" class="img">
-        <img src="images/Pigeon-HD-Pictures.jpg" alt="pic2" class="img">
+        <img src="images/2.jpg" alt="pic1" class="img" id="img1">
+        <img src="images/3.jpg" alt="pic2" class="img" id="img2">
     </div>
 
     <div id="button">

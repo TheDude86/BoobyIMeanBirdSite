@@ -41,6 +41,21 @@ app.get('/bird', ((req, res) => {
             res.status(200).json(bird);
         }
     });
+})).post('/bird', ((req, res) => {
+    const d = new Date();
+    const day = d.getDate();
+    const month = d.getMonth();
+    const year = d.getFullYear();
+
+   Bird.create({
+    name: "",
+    url: "",
+    date_added: day+'/'+month+'/'+year,
+    upvotes: 0,
+    downvotes: 0,
+    bio: "",
+    score: 0
+   }) 
 }));
 
 // viewed at http://localhost:8080

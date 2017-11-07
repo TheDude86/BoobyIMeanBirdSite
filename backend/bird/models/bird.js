@@ -5,7 +5,7 @@ var ObjectId = Schema.ObjectId;
 var birdSchema = new Schema({
     name: {type: String, required: true},
     url: String,
-    date_added: Date,
+    date_added: String,
     upvotes: Number,
     downvotes: Number,
     // views:

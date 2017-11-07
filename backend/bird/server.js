@@ -3,6 +3,8 @@ var app = express();
 var path = require('path');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var admin = require("firebase-admin");
+
 
 const port = 3000;//8080
 
@@ -16,6 +18,18 @@ const Bird = mongoose.model('Bird');
 // const Bird_Metrics = mongoose.model('Bird_Metrics');
 // const Boards = mongoose.model('Boards');
 // const User = mongoose.model('User');
+
+var serviceAccount = require("./bird-c0cb8-firebase-adminsdk-83f1n-60a368d421.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://bird-c0cb8.firebaseio.com"
+});
+
+var auth = admin.auth();
+
+var storage = admin.storage();
+
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
@@ -56,6 +70,13 @@ app.get('/bird', ((req, res) => {
     bio: "",
     score: 0
    }) 
+}));
+
+app.put('/upload', ((req, res) => {
+
+
+    res.send(0);
+
 }));
 
 // viewed at http://localhost:8080

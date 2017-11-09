@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
-const Vote = mongoose.model('Vote');
 
 var birdSchema = new Schema({
     name: {type: String, required: true},
@@ -11,8 +10,8 @@ var birdSchema = new Schema({
     downvotes: Number,
     views: Number,
     bio: String,
-    score: Number
-    // user_key: 
+    score: Number,
+    user_key: String
    
 });
 

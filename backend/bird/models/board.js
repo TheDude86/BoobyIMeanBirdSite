@@ -9,4 +9,4 @@ var boardSchema = new Schema({
     trending: ObjectId
 });
 
-module.exports = {model: mongoose.model('Board', boardSchema), schema: birdSchema};
+module.exports = {model: mongoose.model('Board', boardSchema), schema: boardSchema};

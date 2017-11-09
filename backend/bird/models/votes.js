@@ -7,4 +7,4 @@ var voteSchema = new Schema({
     users: [ObjectId]
 });
 
-module.exports = {model: mongoose.model('Vote', boardSchema), schema: birdSchema};
+module.exports = {model: mongoose.model('Vote', voteSchema), schema: voteSchema};

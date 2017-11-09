@@ -72,10 +72,8 @@ app.get('/bird', ((req, res) => {
    }) 
 }));
 
-app.put('/upload', ((req, res) => {
-
-
-    res.send(0);
+app.get('/upload', ((req, res) => {
+    res.render('upload-page.html');
 
 }));
 

@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 var birdSchema = new Schema({
-    name: {type: String, required: true},
+    name: String,
     url: String,
     date_added: String,
     upvotes: Number,

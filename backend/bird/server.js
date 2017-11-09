@@ -93,6 +93,14 @@ app.get('/law', function(req, res) {
 
 });
 
+app.get('/all-ratings', function(req, res) {
+    res.render('all-ratings-page.html');
+});
+
+app.get('/detail', function(req, res) {
+    res.render('detail-page.html');
+});
+
 
 mongoose.connect('mongodb://localhost:27017/birddb');
 

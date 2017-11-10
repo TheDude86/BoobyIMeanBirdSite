@@ -8,20 +8,26 @@
     <title>Bi.rd</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-    <div id="banner">
-        <li><a href="main-page.html">Bi.rd<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="main-page.html">Home<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="rating-page.html">Ratings<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="law-page.html">Laws<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <button id="search-button" type="button" id="search-button">Search</button>
-        <input class="input-small" type="text" name="search-bar" id="search-bar">
+    <div class="icon-bar">
+      <a class="active" href="#"><i class="fa fa-home"></i></a> 
+      <a href="rating-page.html"><i><img src="images/star.png" class="icon"></i></a> 
+      <a href="upload.html"><i><img src="images/upload.png" class="icon"></i></a> 
+      <a href="user.html"><i><img src="images/user.png" class="icon"></i></a> 
+
+      <a href="#"><i class="fa fa-search"></i></a> 
     </div>
 
-    <h1>Bird of the week</h1>
+    <h1>Welcome to Bi.rd</h1>
+
+    <p>Our site is dedicated to fellow bird enthusiasts like yourself.  On this site, you can upload your favorite birds and have other users compare them to other birds.  You can vote whether you like a bird or not vote on which bird you like more.  Enjoy!</p>
+
+    <br>
+    <center><h2>Bird of the week</h2></center>
 
     <div id="main">
         <div id="left">
@@ -31,9 +37,16 @@
 
         <div id="right">
             <img src="images/3.jpg" alt="" class="img" id="picture">
-            <img src="images/world map.svg" alt="" class="img">
         </div>
     </div>
+
+    <center>
+        <div><center class="head">Leaderboards</center></div>
+
+        <div id="boards">
+
+        </div>
+    </center>
 
     <script src="js/main.js"></script>
 

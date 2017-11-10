@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main-page.css">
+    <title>Bi.rd</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBnObC_uh-TCCKC4v3t_51lMbaQaez1Vbk",
+        authDomain: "bird-c0cb8.firebaseapp.com",
+        databaseURL: "https://bird-c0cb8.firebaseio.com",
+        projectId: "bird-c0cb8",
+        storageBucket: "bird-c0cb8.appspot.com",
+        messagingSenderId: "883253705642"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+</head>
+
+<body>
+    <div class="icon-bar">
+      <a href="main-page.html"><i class="fa fa-home"></i></a> 
+      <a href="rating-page.html"><i><img src="images/star.png" class="icon"></i></a> 
+      <a href="upload.html"><i><img src="images/upload.png" class="icon"></i></a> 
+      <a class="active" href="#"><i><img src="images/user.png" class="icon"></i></a> 
+
+      <a href="#"><i class="fa fa-search"></i></a> 
+    </div>
+
+    <div id="login-form">
+      <div class="imgcontainer">
+        <img src="images/avatar.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label><b>Email</b></label>
+        <input id="email" type="text" placeholder="Enter Email" name="uname" required>
+
+        <label><b>Password</b></label>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+        <button id="login" type="submit">Login</button>
+        <button id="register" type="submit">Register</button>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </div>
+
+    <div id="user">
+        <h1>Welcome Back!</h1>
+        <center><p>Your birds</p></center>
+
+         <center>
+            <div id="boards">
+
+            </div>
+            <button id="logout" type="submit">Logout</button>
+
+
+        </center>
+    </div>
+
+
+    <script src="js/user.js"></script>
+
+</body>
+</html>

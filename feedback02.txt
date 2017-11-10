@@ -1,3 +1,0 @@
-Grade: 18/20
-
--2: Did not check if req.params.showId and req.params.memberId exist in .put()

@@ -1,6 +1,0 @@
--2 In backend .delete, need to check for showId and memberId of req.params before you just use them
--1 in backend, deleteMember should send null and status of 204
--0.5 didn't send 404 in backend for deleteMember if id not found
--0.5 shouldn't have datatype/data for delete ajax call
-
-16/20

@@ -1,0 +1,3 @@
+-1 point for not checking that req.params.showId exists before querying the database
+
+9/10

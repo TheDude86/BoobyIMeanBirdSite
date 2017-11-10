@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/all-ratings-page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBnObC_uh-TCCKC4v3t_51lMbaQaez1Vbk",
+        authDomain: "bird-c0cb8.firebaseapp.com",
+        databaseURL: "https://bird-c0cb8.firebaseio.com",
+        projectId: "bird-c0cb8",
+        storageBucket: "bird-c0cb8.appspot.com",
+        messagingSenderId: "883253705642"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <title>All ratings</title>
+</head>
+<body>
+    <div id="banner">
+        <li><a href="main-page.html">Bi.rd<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="main-page.html">Home<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="rating-page.html">Ratings<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <li><a href="law-page.html">Laws<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
+        <button id="search-button" type="button" id="search-button">Search</button>
+        <input class="input-small" type="text" name="search-bar" id="search-bar">
+    </div>
+
+    <input type="text" id="email" value="">
+    <input type="password" id="password" value="">
+
+    <button id="login">Login</button>
+    <button id="register">Register</button>
+
+    <script src="js/login.js"></script>    
+</body>
+</html>

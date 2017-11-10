@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background: linear-gradient(#dddddd, #ffffff);
 }
 
 /*HEADER STYLES*/
@@ -221,4 +222,9 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+}
+
+#p {
+    margin: auto;
+    width: 95%;
 }

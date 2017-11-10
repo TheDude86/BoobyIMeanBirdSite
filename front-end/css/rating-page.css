@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    background: linear-gradient(#dddddd, #ffffff);
+    height: 100vh;
 }
 
 .icon-bar {
@@ -52,7 +54,8 @@ h1 {
 #compare {
     display: flex;
     flex: 1 1 0;
-    height: 400px;
+    height: 550px;
+    background: transparent;
 }
 
 .img {

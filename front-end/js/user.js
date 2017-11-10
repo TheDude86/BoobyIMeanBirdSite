@@ -49,7 +49,9 @@
 
                             data.sort(function(a, b){return b.score - a.score});
 
-                            var $div = $("<div>", {"class": "board"});
+                            var $div = $("<div>", {"class": "board"}).css({
+                                "background": "#dddddd"
+                            });
                             $div.append("<h3>Your birds</h3>")
 
                             for (var i = 0; i < data.length; i++) {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main-page.css">
+    <link rel="stylesheet" href="css/user-page.css">
     <title>Bi.rd</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
       <a href="upload.html"><i><img src="images/upload.png" class="icon"></i></a> 
       <a class="active" href="#"><i><img src="images/user.png" class="icon"></i></a> 
 
-      <a href="#"><i class="fa fa-search"></i></a> 
+      <a href="search-page.html"><i class="fa fa-search"></i></a> 
     </div>
 
     <div id="login-form">
@@ -60,7 +61,6 @@
 
     <div id="user">
         <h1>Welcome Back!</h1>
-        <center><p>Your birds</p></center>
 
          <center>
             <div id="boards">
@@ -72,6 +72,26 @@
         </center>
     </div>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="list">
+        <div class="list-line">
+            <div class="list-image"><img id="modal-pic"></div>
+            <div class="list-text">
+                <p><b id="modal-name">Name</b></p> 
+                <p id="modal-bio">Description: d</p>
+                <p>↑<span id="upvotes">upvotes</span> ↓<span id="downvotes">downvotes</span></p>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
 
     <script src="js/user.js"></script>
 

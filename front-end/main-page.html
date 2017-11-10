@@ -24,7 +24,7 @@
 
     <h1>Welcome to Bi.rd</h1>
 
-    <p>Our site is dedicated to fellow bird enthusiasts like yourself.  On this site, you can upload your favorite birds and have other users compare them to other birds.  You can vote whether you like a bird or not vote on which bird you like more.  Enjoy!</p>
+    <p id="p">Our site is dedicated to fellow bird enthusiasts like yourself.  On this site, you can upload your favorite birds and have other users compare them to other birds.  You can vote whether you like a bird or not vote on which bird you like more.  Enjoy!</p>
 
     <br>
     <center><h2>Bird of the week</h2></center>
@@ -47,6 +47,27 @@
 
         </div>
     </center>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="list">
+        <div class="list-line">
+            <div class="list-image"><img id="modal-pic"></div>
+            <div class="list-text">
+                <p><b id="modal-name">Name</b></p> 
+                <p id="modal-bio">Description: d</p>
+                <p>↑<span id="upvotes">upvotes</span> ↓<span id="downvotes">downvotes</span></p>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
 
     <script src="js/main.js"></script>
 

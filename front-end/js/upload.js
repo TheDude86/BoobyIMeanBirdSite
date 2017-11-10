@@ -2,13 +2,15 @@
     "use strict";
     const apiUrl = "http://localhost:4500/api/shows/";
     var file;
+    var token;
 
     function uploadBird(url) {
 
         const bird = {
             name : $('#name').val(),
             bio : $('#bio').val(),
-            url : url
+            url : url,
+            token: token
         };
 
         console.log(bird);
@@ -24,7 +26,6 @@
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
     }
@@ -40,7 +41,6 @@
         });
 
         $('#upload').click(() => {
-            console.log("TEST");
             if (file) {
                 var storageRef = firebase.storage().ref(file.name);
                 storageRef.put(file).then((snapshot) => {
@@ -50,6 +50,19 @@
 
         });
 
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
+                    token = idToken;
+                    console.log(idToken);
+                }).catch(function(error) {
+
+                });
+
+            } else {
+                $('#upload').hide();
+            }
+        });
 
     });
 

@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+}
+
 #banner {
     background-color: #d4d4d4;
     overflow: hidden;
@@ -70,4 +74,31 @@ p {
 
 img {
     max-width: 300px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    color: green;
+    font-size: 100px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

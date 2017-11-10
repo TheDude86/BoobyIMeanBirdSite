@@ -1,8 +1,22 @@
 const express = require('express'),
-    router = express.Router(),
-    bodyParser = require('body-parser'), // parse info from POST body
-    methodOverride = require('method-override');  // used to manipulate POST data
+router = express.Router(),
+bodyParser = require('body-parser'), // parse info from POST body
+methodOverride = require('method-override');  // used to manipulate POST data
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("../bird-c0cb8-firebase-adminsdk-83f1n-86a90a9a5b.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://bird-c0cb8.firebaseio.com"
+});
+
+var auth = admin.auth();
+
 const SHOW = require('../models/shows');
+const USER = require('../models/users');
+
 const weekKey = "5a05048bdd2ca03adff0b929";
 
 router.use(bodyParser.urlencoded({ extended: true }));
@@ -26,6 +40,60 @@ function handleError(err, res, msg, statusCode) {
     err.message = `${err.status}, ${msg}. ${err.message}`;
     res.json(err);
 }
+
+router.route('/register')
+    .post( (req, res) => {
+        const token = req.body.token;
+        // console.log(token);
+
+        auth.verifyIdToken(token).then(function(decodedToken) {
+                var uid = decodedToken.uid;
+                console.log("uid " + uid);
+
+                USER.find({}, (err, user) => {
+                    if (user.length) {
+                        res.json({});
+
+                    } else {
+                        USER.create({
+                            name : uid
+                        }, (err, user) => {
+                            if (err) {
+                                handleError(err, res, 'Could not save the show in the database', 500);
+                            } else {
+                                res.json(user);
+                            }
+                        });
+
+                    }
+                });
+
+            }).catch(function(error) {
+                console.log(error);
+                res.json({});
+
+            });
+
+
+    });
+
+router.route('/:userId/getAll')
+    .get( (req, res) => {
+        SHOW.find({},  (err, shows) => {
+            if (err) {
+                handleError(err, res, 'Shows Not Found', 404);
+            } else {
+                SHOW.find({user_key : req.params.userId},  (err, birds) => {
+                    if (err) {
+                        handleError(err, res, 'Shows Not Found', 404);
+                    } else {
+                        res.json(birds);
+                    }
+                });
+
+            }
+        });
+    });
 
 router.route('/all')
     .get( (req, res) => {
@@ -111,6 +179,7 @@ router.route('/compare')
 function upvote(bird) {
     bird.upvotes += 1;
     bird.score += 5;
+    bird.views += 1;
     bird.save((err, book) => {
                 
     });
@@ -120,6 +189,7 @@ function upvote(bird) {
 function downvote(bird) {
     bird.downvotes += 1;
     bird.score -= 3;
+    bird.views += 1;
     bird.save((err, book) => {
                 
     });
@@ -142,24 +212,37 @@ router.route('/upload')
     })
     .post((req, res) => {
 
-        console.log(req.body.name);
+        const token = req.body.token;
+        console.log(token);
 
-        SHOW.create({
-            name: req.body.name,
-            url: req.body.url,
-            date_added: (new Date()).getTime(),
-            upvotes: 0,
-            downvotes: 0,
-            views: 0,
-            bio: req.body.bio,
-            score: 0
-        }, (err, bird) => {
-            if (err) {
-                handleError(err, res, 'Could not save the show in the database', 500);
-            } else {
-                res.json(bird);
-            }
-        });
+        auth.verifyIdToken(token).then(function(decodedToken) {
+                var uid = decodedToken.uid;
+                SHOW.create({
+                    name: req.body.name,
+                    url: req.body.url,
+                    date_added: (new Date()).getTime(),
+                    upvotes: 0,
+                    downvotes: 0,
+                    views: 0,
+                    user_key: uid,
+                    bio: req.body.bio,
+                    score: 0
+                }, (err, bird) => {
+                    if (err) {
+                        handleError(err, res, 'Could not save the show in the database', 500);
+                    } else {
+                        res.json(bird);
+                    }
+                });
+
+            }).catch(function(error) {
+                console.log(error);
+                res.json({});
+
+            });
+
+
+
     });
 
 

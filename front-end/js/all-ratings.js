@@ -23,7 +23,6 @@
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
 

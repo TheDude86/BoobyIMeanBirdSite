@@ -29,16 +29,19 @@
         window.jQuery || document.write('<script src="js/jquery-3.1.1.js"><\/script>');
     </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <div id="banner">
-        <li><a href="main-page.html">Bi.rd<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="/">Home<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="/ratings">Ratings<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <li><a href="/law">Laws<span>&nbsp&nbsp|&nbsp&nbsp</span></a></li>
-        <button id="search-button" type="button" id="search-button">Search</button>
-        <input class="input-small" type="text" name="search-bar" id="search-bar">
+    <div class="icon-bar">
+      <a href="main-page.html"><i class="fa fa-home"></i></a> 
+      <a href="rating-page.html"><i><img src="images/star.png" class="icon"></i></a> 
+      <a class="active" href="#"><i><img src="images/upload.png" class="icon"></i></a> 
+      <a href="user.html"><i><img src="images/user.png" class="icon"></i></a> 
+
+      <a href="search-page.html"><i class="fa fa-search"></i></a> 
     </div>
 
     <input type="file" id="fileButton"/>

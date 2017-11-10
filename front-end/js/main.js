@@ -1,6 +1,7 @@
 (function () {
     "use strict";
     const apiUrl = "http://localhost:4500/api/shows/";
+    var birds;
 
     // Get the modal
 var modal = document.getElementById('myModal');
@@ -38,7 +39,6 @@ window.onclick = function(event) {
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
 
@@ -48,6 +48,8 @@ window.onclick = function(event) {
             dataType: 'JSON',
             success:  (data) => {
                 console.log(data.length);
+
+                birds = data;
 
                 data.sort(function(a, b){return b.score - a.score});
 
@@ -71,10 +73,18 @@ window.onclick = function(event) {
                     $id.hide();
                     $list.append($id);
 
-                    $list.click(() => {
+                    $list.click( function(event) {
+                        var clicked = $(this); 
+                        const index = (clicked.index() - 1) / 2;
                         birds.sort(function(a, b){return b.score - a.score});
+
                         modal.style.display = "block";
-                        $("#modal-name").text($list.find("div")[0]);
+                        $("#modal-name").text(birds[index].name);
+                        $("#modal-bio").text(birds[index].bio);
+                        $("#upvotes").text(birds[index].upvotes);
+                        $("#downvotes").text(birds[index].downvotes);
+                        $("#modal-pic").attr("src", birds[index].url);
+
                     });
 
                     $div.append($list);
@@ -103,9 +113,18 @@ window.onclick = function(event) {
                                     <div class="list-text"><p>${bird.name}</p> <p>Views: ${bird.views}</p> </div>
                                 </div>`);
 
-                    $list.click(() => {
+                    $list.click( function(event) {
+                        var clicked = $(this); 
+                        const index = (clicked.index() - 1) / 2;
+                        data.sort(function(a, b){return b.views - a.views});
+
                         modal.style.display = "block";
-                        console.log("TEST");
+                        $("#modal-name").text(birds[index].name);
+                        $("#modal-bio").text(birds[index].bio);
+                        $("#upvotes").text(birds[index].upvotes);
+                        $("#downvotes").text(birds[index].downvotes);
+                        $("#modal-pic").attr("src", birds[index].url);
+
                     });
 
                     $div.append($list);
@@ -135,9 +154,18 @@ window.onclick = function(event) {
                                     <div class="list-text"><p>${bird.name}</p> <p>Date: ${date.customFormat( "#MM#/#DD#/#YYYY# #hh#:#mm#:#ss#" )}</p></div>
                                 </div>`);
 
-                    $list.click(() => {
+                    $list.click( function(event) {
+                        var clicked = $(this); 
+                        const index = (clicked.index() - 1) / 2;
+                        data.sort(function(a, b){return b.date_added - a.date_added});
+
                         modal.style.display = "block";
-                        console.log("TEST");
+                        $("#modal-name").text(birds[index].name);
+                        $("#modal-bio").text(birds[index].bio);
+                        $("#upvotes").text(birds[index].upvotes);
+                        $("#downvotes").text(birds[index].downvotes);
+                        $("#modal-pic").attr("src", birds[index].url);
+
                     });
 
                     $div.append($list);
@@ -152,7 +180,6 @@ window.onclick = function(event) {
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
 

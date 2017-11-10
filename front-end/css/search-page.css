@@ -1,0 +1,91 @@
+body {
+    margin: 0px;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+#search-box {
+    width: 80%;
+    border-radius: 10px;
+    height: 50px;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    font-size: 40px;
+}
+
+.list {
+    /*border: 1px solid gray;*/
+    border-radius: 5px;
+    padding: 8px;
+    width: 400px;
+    height: 150px;
+}
+
+.list-image {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.list-text {
+    float: left;
+}
+
+.list-line::after {
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+.board {
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow-y: scroll;
+    height: 600px;
+    width: 400px;
+}
+
+.board::after {
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+}

@@ -17,7 +17,7 @@ var auth = admin.auth();
 const SHOW = require('../models/shows');
 const USER = require('../models/users');
 
-const weekKey = "5a05048bdd2ca03adff0b929";
+const weekKey = "5a05e7043177e84c786aa498";
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(methodOverride( (req) => {
@@ -91,6 +91,26 @@ router.route('/:userId/getAll')
                     }
                 });
 
+            }
+        });
+    });
+
+router.route('/search')
+    .post( (req, res) => {
+        const term = req.body.term;
+        SHOW.find({},  (err, birds) => {
+            if (err) {
+                handleError(err, res, 'Shows Not Found', 404);
+            } else {
+                var result = [];
+
+                for (var i = 0; i < birds.length; i++) {
+                    if (birds[i].name.toLowerCase().startsWith(term)) {
+                        result.push(birds[i]);
+                    }
+                }
+
+                res.json(result);
             }
         });
     });

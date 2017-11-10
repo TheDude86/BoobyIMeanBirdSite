@@ -33,33 +33,51 @@
     background: linear-gradient(gray, white);
 } 
 
-li {
+body {
+    margin: 0px;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
     float: left;
-    list-style: none;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
 }
 
-#banner p {
-    float: left;
+.active {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
-li a {
-    color: Black;
-    text-decoration: none;
-    font-size: 20px;
+.icon-bar a:hover {
+    background-color: #000;
 }
 
-#search-bar {
-    float: right;
-    font-size: 20px;
-    align-content: right;
-    border-radius: 5px;
+.icon {
+    width: 30px;
+    height: 30px;
 }
 
-#search-button {
-    float: right;
-    font-size: 20px;
-    align-content: right;
-    border-radius: 5px;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
 h1 {

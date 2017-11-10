@@ -22,7 +22,6 @@ $(document).ready(function () {
         },
         error:  (request, status, error) => {
             console.log(error, status, request);
-            alert(error, status, request);
         }
     });
 
@@ -47,7 +46,6 @@ $(document).ready(function () {
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
     })
@@ -73,7 +71,6 @@ $(document).ready(function () {
             },
             error:  (request, status, error) => {
                 console.log(error, status, request);
-                alert(error, status, request);
             }
         });
     })

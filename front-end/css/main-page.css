@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background: linear-gradient(#dddddd, #ffffff);
 }
 
 /*HEADER STYLES*/
@@ -270,4 +271,8 @@ span.psw {
     margin-top: 5%;
     display: flex;
     font-size: 40px;
+
+#p {
+    margin: auto;
+    width: 95%;
 }

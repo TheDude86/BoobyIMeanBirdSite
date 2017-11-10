@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    background: linear-gradient(#dddddd, #ffffff);
+    height: 100vh;
 }
 
 .icon-bar {
@@ -35,6 +37,8 @@ body {
     width: 100%;
     
 }
+
+
 
 h1 {
     text-align: center;
@@ -73,6 +77,12 @@ h1 {
     display: block; 
     height: 0; 
     clear: both;
+
+#results div {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    height: 100px;
 }
 
 .board {

@@ -2,4 +2,5 @@
 
 body {
     background: linear-gradient(#dddddd, #ffffff);
+    height: 100vh;
 }

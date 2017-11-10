@@ -1,3 +1,6 @@
+body {
+    margin: 0px;
+}
 
 /*HEADER STYLES*/
 .icon-bar {
@@ -72,7 +75,12 @@
 }
 
 .active {
-    background-color: #4CAF50 !important;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
 }
 
 #banner {

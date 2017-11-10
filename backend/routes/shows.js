@@ -95,6 +95,18 @@ router.route('/:userId/getAll')
         });
     });
 
+router.route('/:birdId/getBird')
+    .get( (req, res) => {
+        SHOW.findById(req.params.birdId,  (err, bird) => {
+            if (err) {
+                handleError(err, res, 'Shows Not Found', 404);
+            } else {
+                res.json(bird);
+
+            }
+        });
+    });
+
 router.route('/all')
     .get( (req, res) => {
         SHOW.find({},  (err, shows) => {

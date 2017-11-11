@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "bird-e10bf"
+    "default": "bird-e10bf",
+    "production": "bird-e10bf"
   }
 }

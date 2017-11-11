@@ -2,7 +2,9 @@
     "use-strict";
     let LoggedIn = false;
     let Username = "Username";
-    let apiUrl = "http://localhost:3000/";
+    // let apiUrl = "http://localhost:3000/";
+    // const apiUrl = "https://bird-lairdjl.herokuapp.com/";
+    const apiUrl = "https://bird-lairdjl.herokuapp.com/api/shows/";    
 
     $.ajax({
         url: apiUrl + 'bird/',

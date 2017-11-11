@@ -1,6 +1,7 @@
 $(document).ready(function () {
     "use strict";
-    const apiUrl = "http://localhost:4500/api/shows/";
+    // const apiUrl = "http://localhost:4500/api/shows/";
+    const apiUrl = "https://bird-lairdjl.herokuapp.com/api/shows/";
 
     $(document).ready( () => {
 

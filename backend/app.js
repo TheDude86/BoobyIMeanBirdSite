@@ -22,7 +22,7 @@ mongoose.connect(dbURI, {
     console.log(`App is connected to mongodb database at ${dbURI}`);
 });
 
-const port = process.env.PORT || '4500';
+const port = process.env.PORT || 4500;
 
 app.use(cors());
 

@@ -11,7 +11,11 @@ const shows = require('./routes/shows');
 
 const app = express();
 
-const dbURI = 'mongodb://localhost/broadwayshows';
+let dbURI = 'mongodb://localhost/broadwayshows';
+if (process.env.NODE_ENV === 'production') {
+    dbURI = process.env.MLAB_URI;
+}
+
 mongoose.connect(dbURI, {
     useMongoClient: true
 }, () => {
